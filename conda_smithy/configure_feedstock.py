@@ -1542,7 +1542,11 @@ def _load_forge_config(forge_dir, exclusive_config_file, forge_yml=None):
         "drone": {},
         "travis": {},
         "circle": {},
-        "github_actions": {},
+        "github_actions": {
+            # Toggle creating artifacts for conda build_artifacts dir
+            "store_build_artifacts": False,
+            "artifact_retention_days": 14,
+        },
         "config_version": "2",
         "appveyor": {"image": "Visual Studio 2017"},
         "azure": {
